@@ -2,79 +2,81 @@
 
 ## Description
 
-L'objectif de ce challenge était de développer un modèle capable de prédire la probabilité de défaut selon 
-les normes bâloises, en s'appuyant sur un ensemble diversifié de données, incluant des informations signalétiques, 
-comportementales et financières relatives aux emprunteurs.
+The goal of this challenge was to develop a model capable of predicting the likelihood of default according
+to Basel standards, using a diverse set of data, including demographic, behavioral, and financial information about borrowers.
 
-La présentation de ces résultats a été faite via un dashboard développé avec plotly Dash.
+The presentation of these results was made through a dashboard developed with Plotly Dash.
 
-## Structure du Projet
+## Project structure
 
-Le projet est structuré comme suit :
+The project is structured as follows:
 
-- `notebooks/` : Dossier contenant les Jupyter Notebooks pour l'analyse et la modélisation.
-  - `Analyse_Préparation` : Dossier contenant les Notebooks sur l'analyse exploratoire et la préparation des données. 
-  - `Modélisation_Interprétabilité` : Dossier contenant les Notebooks de modélisation, grille de score, segmentation et marge de conservatismes pour notre modèle le plus interprétable
-  - `Modélisation_Performance` : Dossier contenant les Notebooks de modélisation, grille de score, segmentation et marge de conservatismes pour notre modèle le plus performant
-  - `XGBoost` : Dossier contenant les Notebooks de modélisation, grille de score et segmentation avec un modèle de Boosting.
-- `script/` : 
-  - `data_preparation` : module python contenant les classes de préparation des données.
-  - `Logit_utils` : module python contenant la classe permettant de créer la grille de score du modèle Logit.
-  - `XGB_utils` : module python contenant les classes permettant d'entraîner un modèle de xgboost et de créer la grille de score.
-- `app/` :
-  - `app_utils` : module python contenant les fonctions utiles à l'application
-  - `builders` : module python contenant le code html du dashboard
-  - `callbacks` : module python contenant les fonctions permettant l'interaction avec le dashboard
-  - `plot_analyse` : module python contenant les graphiques pour la partie analyse des données
-  - `plot_utils` : module python contenant certains graphiques
-  - `vars` : module python contenant les variables
+- `notebooks/` : Folder containing the Jupyter notebooks for the EDA and the modelisation.
+  - `Analyse_Préparation` : Folder containing the Jupyter notebooks for the EDA and the data preparation.
+  - `Modélisation_Interprétabilité` : Folder containing the modeling Notebooks, scoring grid, segmentation, and conservatism margins for our most interpretable model.
+  - `Modélisation_Performance` : Folder containing the modeling Notebooks, score grid, segmentation, and conservatism margin for our most efficient model.
+  - `XGBoost` : Folder containing the modeling Notebooks, score grid, and segmentation with a Boosting model.
+    
+- `script/` : Folder containing the python scripts.
+  - `data_preparation` : Python module containing data preparation classes.
+  - `Logit_utils` : Python module containing the class for creating the score grid for the Logit model.
+  - `XGB_utils` : Python module containing classes for training an XGBoost model and creating the scoring grid.
 
-## Pour récupérer le projet
+- `app/` : Folder containing the scripts for the application.
+  - `app_utils` : Python module containing functions useful to the application.
+  - `builders` : Python module containing the HTML code of the dashboard.
+  - `callbacks` : Python module containing functions for interacting with the dashboard.
+  - `plot_analyse` : Python module containing the graphs for the data analysis section.
+  - `plot_utils` : Python module containing some graphics
+  - `vars` : Python module containing the variables
 
-1. Cloner le repository
+## To retrieve the project
+
+1. Clone the repository
 
     ```bash
     git clone https://github.com/Samuel-LP/Challenge_Nexialog.git
     ```
 
-2. Créer un environnement virtuel
+2. Create a virtual environment
 
-   2.1 Pour Windows : 
+   2.1 On Windows : 
    
    ```bash
     python -m venv venv
     .\venv\Scripts\activate
    ```
    
-   2.2  Pour Mac/Linux : 
+   2.2  On Mac/Linux : 
 
    ```bash
     python3 -m venv venv
     source venv/bin/activate
    ```
 
-3. Installer les dépendances : 
+3. Install the dependancies : 
    ```bash
     pip install -r requirements.txt
    ```
 
-## Pour lancer l'application
+## To launch the application
 
-Tout d'abord, placez vous à la racine du projet :
+First, position yourself at the root of the project:
 ```bash
 cd Challenge-Nexialog
 ```
 
-Ensuite, rentrez la commande suivante :
+Then, enter the following command:
 
 ```bash
 python app.py
 ```
 
-Nous n'aurez plus qu'à cliquer sur le lien dans le terminal afin d'utiliser notre application, Nexiamod !
+All you'll have to do is click on the link in the terminal to use our application, Nexiamod!
+
 ## Authors
 
 - [Jingyi Zhou](https://github.com/ZJY602)
 - [Samuel Baheux](https://github.com/SamuelBaheux)
-- [Samuel Launay Pariente](https://github.com/samuel-LP)
+- [Samuel Pariente Launay](https://github.com/samuel-LP)
 - [Axel Fritz](https://github.com/AxelFritz1)
